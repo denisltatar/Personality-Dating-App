@@ -26,6 +26,25 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
 
     func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Error!) {
         print("User email: \(user.profile.email ?? "No Email")")
+        
+        
+        // Let's authenticate the user's sign in
+        // After we signed in, let's move to the next view controller
+        /*
+        if let authentication = user.authentication {
+            let credential = GoogleAuthProvider.credential(withIDToken: authentication.idToken, accessToken: authentication.accessToken)
+
+            Auth.auth().signIn(with: credential, completion: { (user, error) -> Void in
+                if error != nil {
+                    print("Problem at signing in with google with error : \(error)")
+                } else if error == nil {
+                    print("user successfully signed in through GOOGLE! uid:\(Auth.auth().currentUser!.uid)")
+                    print("signed in")
+                    performSegue(withIdentifier: "toMessages", sender: self)
+                    //self.performSegue(withIdentifier: "toRegister", sender: self)
+                }
+            })
+        } */
     }
     
     func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any] = [:]) -> Bool {

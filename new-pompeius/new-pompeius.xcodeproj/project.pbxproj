@@ -17,6 +17,9 @@
 		17CA1A4A24F876F200856B9E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 17CA1A4924F876F200856B9E /* GoogleService-Info.plist */; };
 		17CA1A4C24F88C8400856B9E /* registerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17CA1A4B24F88C8400856B9E /* registerViewController.swift */; };
 		17CA1A4E24F9573200856B9E /* MessagingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17CA1A4D24F9573200856B9E /* MessagingViewController.swift */; };
+		17CA1A5024F98A4700856B9E /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17CA1A4F24F98A4700856B9E /* Utilities.swift */; };
+		17CA1A5424F9907A00856B9E /* MyProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17CA1A5324F9907A00856B9E /* MyProfileViewController.swift */; };
+		17CA1A5624F9929200856B9E /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17CA1A5524F9929200856B9E /* Constants.swift */; };
 		4347F254907433847B3FAAFB /* Pods_new_pompeiusTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2BF3B1AFE6EC54D79EE75081 /* Pods_new_pompeiusTests.framework */; };
 		A17103E97DA018C1A28A78DF /* Pods_new_pompeius.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B96B408C1F914E726760492 /* Pods_new_pompeius.framework */; };
 /* End PBXBuildFile section */
@@ -46,6 +49,9 @@
 		17CA1A4924F876F200856B9E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		17CA1A4B24F88C8400856B9E /* registerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = registerViewController.swift; path = "/Users/denisltatar/Desktop/Personality Dating App/Personality-Dating-App/new-pompeius/new-pompeius/registerViewController.swift"; sourceTree = "<absolute>"; };
 		17CA1A4D24F9573200856B9E /* MessagingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagingViewController.swift; sourceTree = "<group>"; };
+		17CA1A4F24F98A4700856B9E /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
+		17CA1A5324F9907A00856B9E /* MyProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyProfileViewController.swift; sourceTree = "<group>"; };
+		17CA1A5524F9929200856B9E /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		2B96B408C1F914E726760492 /* Pods_new_pompeius.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_new_pompeius.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2BF3B1AFE6EC54D79EE75081 /* Pods_new_pompeiusTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_new_pompeiusTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		41BAEBD8ED7C7AE827733283 /* Pods-new-pompeius.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-new-pompeius.debug.xcconfig"; path = "Target Support Files/Pods-new-pompeius/Pods-new-pompeius.debug.xcconfig"; sourceTree = "<group>"; };
@@ -97,13 +103,12 @@
 		17CA1A2624F8226A00856B9E /* new-pompeius */ = {
 			isa = PBXGroup;
 			children = (
+				17CA1A5224F98A7800856B9E /* ViewControllers */,
+				17CA1A5124F98A5100856B9E /* Helpers */,
 				17CA1A2724F8226A00856B9E /* AppDelegate.swift */,
-				17CA1A2924F8226A00856B9E /* SceneDelegate.swift */,
-				17CA1A4D24F9573200856B9E /* MessagingViewController.swift */,
-				17CA1A2B24F8226A00856B9E /* ViewController.swift */,
-				17CA1A4B24F88C8400856B9E /* registerViewController.swift */,
 				17CA1A2D24F8226A00856B9E /* Main.storyboard */,
 				17CA1A3024F8226D00856B9E /* Assets.xcassets */,
+				17CA1A2924F8226A00856B9E /* SceneDelegate.swift */,
 				17CA1A3224F8226D00856B9E /* LaunchScreen.storyboard */,
 				17CA1A4924F876F200856B9E /* GoogleService-Info.plist */,
 				17CA1A3524F8226D00856B9E /* Info.plist */,
@@ -118,6 +123,27 @@
 				17CA1A4024F8226E00856B9E /* Info.plist */,
 			);
 			path = "new-pompeiusTests";
+			sourceTree = "<group>";
+		};
+		17CA1A5124F98A5100856B9E /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				17CA1A4F24F98A4700856B9E /* Utilities.swift */,
+				17CA1A5524F9929200856B9E /* Constants.swift */,
+			);
+			name = Helpers;
+			path = ..;
+			sourceTree = "<group>";
+		};
+		17CA1A5224F98A7800856B9E /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				17CA1A4D24F9573200856B9E /* MessagingViewController.swift */,
+				17CA1A5324F9907A00856B9E /* MyProfileViewController.swift */,
+				17CA1A2B24F8226A00856B9E /* ViewController.swift */,
+				17CA1A4B24F88C8400856B9E /* registerViewController.swift */,
+			);
+			path = ViewControllers;
 			sourceTree = "<group>";
 		};
 		8576787F4A4D09A5FF0462F9 /* Pods */ = {
@@ -327,11 +353,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				17CA1A5024F98A4700856B9E /* Utilities.swift in Sources */,
 				17CA1A2C24F8226A00856B9E /* ViewController.swift in Sources */,
+				17CA1A5424F9907A00856B9E /* MyProfileViewController.swift in Sources */,
 				17CA1A2824F8226A00856B9E /* AppDelegate.swift in Sources */,
 				17CA1A2A24F8226A00856B9E /* SceneDelegate.swift in Sources */,
 				17CA1A4E24F9573200856B9E /* MessagingViewController.swift in Sources */,
 				17CA1A4C24F88C8400856B9E /* registerViewController.swift in Sources */,
+				17CA1A5624F9929200856B9E /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
