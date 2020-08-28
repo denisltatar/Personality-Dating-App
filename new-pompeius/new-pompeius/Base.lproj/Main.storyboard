@@ -423,6 +423,10 @@
                                 <rect key="frame" x="143" y="98" width="128" height="79"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Group 127-1" translatesAutoresizingMaskIntoConstraints="NO" id="Hbx-7b-QRh">
+                                <rect key="frame" x="-259" y="-111" width="897" height="530"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="All Friends" translatesAutoresizingMaskIntoConstraints="NO" id="eBO-j7-dL2">
                                 <rect key="frame" x="-239" y="-110" width="128" height="79"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -475,10 +479,14 @@
                                     <action selector="aboutButton:" destination="MgW-G5-udN" eventType="touchUpInside" id="Dw0-0f-wSq"/>
                                 </connections>
                             </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Group 127-1" translatesAutoresizingMaskIntoConstraints="NO" id="Hbx-7b-QRh">
-                                <rect key="frame" x="-259" y="-111" width="897" height="530"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D0A-4N-xzw">
+                                <rect key="frame" x="79" y="653" width="256" height="61"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
+                                <state key="normal" image="Log Out Button"/>
+                                <connections>
+                                    <action selector="logOutButton:" destination="MgW-G5-udN" eventType="touchUpInside" id="3aS-XM-FaL"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="Cg2-OD-6WA"/>
@@ -534,6 +542,7 @@
         <image name="Help &amp; Support" width="96" height="19"/>
         <image name="Here Are Your Matches" width="252" height="30"/>
         <image name="Line 29" width="286" height="1"/>
+        <image name="Log Out Button" width="256" height="61"/>
         <image name="Logo-1" width="285" height="228"/>
         <image name="My Profile" width="126" height="37"/>
         <image name="My Profile-1" width="63" height="19"/>

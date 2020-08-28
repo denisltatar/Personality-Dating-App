@@ -42,9 +42,30 @@ class ViewController: UIViewController {
     @IBOutlet weak var emailField: UITextField!
     @IBOutlet weak var passwordField: UITextField!
     
-    @IBAction func loginButton(_ sender: Any) {
+    // Check the fields and validate that the data is correct. If everything
+    // if correct, this function returns nil, otherwise it returns the error message
+    func validateFields() -> String? {
+        // Check that all fields are filled in!
+        if emailField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == " " ||
+            passwordField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == " " {
+            return "Please fill in all fields."
+        }
         
+        // Saving the password into a string
+        let cleanedPassword = passwordField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
+        // Check if the password is secure
+        if Utilities.isPasswordValid(cleanedPassword) == false {
+            // Password is not secured enough
+            return "Password must contain 8 charaters, a special character and a number."
+        }
+        return nil
+    }
+    
+    
+    
+    @IBAction func loginButton(_ sender: Any) {
         // TODO: Validate Text Fields
+        let error = validateFields()
         
         // Create cleaned versions of the text field
         let email = emailField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
@@ -61,10 +82,9 @@ class ViewController: UIViewController {
                 // Transition to the "my profile" view controller
                 // TODO: CHANGE THE LOCATION OF THE NEXT VIEW CONTROLLER!
                 self.transitionToNextView()
-                
             }
         }
-}
+    }
     
     func transitionToNextView() {
         // Creating a reference to "myProfileViewController" within our storyboard

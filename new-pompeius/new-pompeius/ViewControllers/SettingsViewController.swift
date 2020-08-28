@@ -28,5 +28,7 @@ class SettingViewController: UIViewController {
     
     @IBAction func exploreButton(_ sender: Any) {
     }
+    @IBAction func logOutButton(_ sender: Any) {
+    }
     
 }
