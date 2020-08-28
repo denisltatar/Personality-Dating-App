@@ -35,7 +35,7 @@ class ViewController: UIViewController {
     }
     
     @IBAction func registerHereButton(_ sender: Any) {
-        print("Here was tapped")
+        self.performSegue(withIdentifier: "toRegister", sender: self)
     }
     
     // Touch outside of text to dismiss keyboard (you can also hit "return")
@@ -44,6 +44,7 @@ class ViewController: UIViewController {
             usernameField.resignFirstResponder()
             passwordField.resignFirstResponder()
     }
+    
     
 }
 

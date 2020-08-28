@@ -31,6 +31,10 @@
                                 <rect key="frame" x="103" y="327" width="209" height="111"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Find your perfect match." translatesAutoresizingMaskIntoConstraints="NO" id="YwS-ke-LNC">
+                                <rect key="frame" x="102" y="392" width="209" height="111"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w7v-qO-XdZ">
                                 <rect key="frame" x="70" y="566" width="274" height="61"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -53,18 +57,19 @@
                                 <state key="normal" image="here.."/>
                                 <connections>
                                     <action selector="registerHereButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="UQj-u0-J5f"/>
+                                    <segue destination="qPA-QD-gB5" kind="presentation" identifier="toRegister" modalPresentationStyle="fullScreen" id="Jri-Cg-Qfq"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Username" textAlignment="center" minimumFontSize="17" background="Rectangle 1" translatesAutoresizingMaskIntoConstraints="NO" id="Bar-PH-5gi">
                                 <rect key="frame" x="61" y="422" width="292" height="64"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="center" minimumFontSize="17" background="Rectangle 1" translatesAutoresizingMaskIntoConstraints="NO" id="WFi-mL-Fe1">
                                 <rect key="frame" x="61" y="484" width="292" height="66"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="avatar" translatesAutoresizingMaskIntoConstraints="NO" id="0xz-Bq-Dkr">
@@ -92,20 +97,107 @@
             </objects>
             <point key="canvasLocation" x="137.68115942028987" y="138.61607142857142"/>
         </scene>
-        <!--View Controller-->
+        <!--Register View Controller-->
         <scene sceneID="Qgk-eq-n4c">
             <objects>
-                <viewController id="qPA-QD-gB5" sceneMemberID="viewController">
+                <viewController id="qPA-QD-gB5" customClass="registerViewController" customModule="new_pompeius" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="mGx-Tb-BCL">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Group 127" translatesAutoresizingMaskIntoConstraints="NO" id="3fQ-dY-qJP">
+                                <rect key="frame" x="-270" y="-83" width="1058" height="564"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Logo-1" translatesAutoresizingMaskIntoConstraints="NO" id="mx5-0k-hsE">
+                                <rect key="frame" x="23" y="122" width="369" height="196"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Find your perfect match." translatesAutoresizingMaskIntoConstraints="NO" id="o2B-KO-dkw">
+                                <rect key="frame" x="135" y="269" width="145" height="75"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Group 161" translatesAutoresizingMaskIntoConstraints="NO" id="taq-kb-uNo">
+                                <rect key="frame" x="-43" y="617" width="525" height="279"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="glasses" translatesAutoresizingMaskIntoConstraints="NO" id="iZv-V3-ZaZ">
+                                <rect key="frame" x="-33" y="627" width="31" height="16"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="center" minimumFontSize="17" background="Rectangle 1" translatesAutoresizingMaskIntoConstraints="NO" id="IUV-4J-8eF">
+                                <rect key="frame" x="61" y="400" width="292" height="66"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email" textAlignment="center" minimumFontSize="17" background="Rectangle 1" translatesAutoresizingMaskIntoConstraints="NO" id="Y6p-UY-ybR">
+                                <rect key="frame" x="61" y="464" width="292" height="66"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Username" textAlignment="center" minimumFontSize="17" background="Rectangle 1" translatesAutoresizingMaskIntoConstraints="NO" id="HVC-qs-7zb">
+                                <rect key="frame" x="61" y="340" width="292" height="66"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="glasses" translatesAutoresizingMaskIntoConstraints="NO" id="ssS-ps-z4d">
+                                <rect key="frame" x="82" y="425" width="31" height="16"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="envelope" translatesAutoresizingMaskIntoConstraints="NO" id="jCm-eb-CXs">
+                                <rect key="frame" x="82" y="489" width="31" height="16"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="avatar" translatesAutoresizingMaskIntoConstraints="NO" id="n3f-Ea-kHV">
+                                <rect key="frame" x="82" y="365" width="31" height="16"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mv3-Hp-oJ4">
+                                <rect key="frame" x="79" y="574" width="256" height="61"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="Register"/>
+                                <connections>
+                                    <action selector="registerButton:" destination="qPA-QD-gB5" eventType="touchUpInside" id="3Lr-Zv-YM8"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OfW-TO-Ag6">
+                                <rect key="frame" x="79" y="651" width="256" height="61"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="Register with Google"/>
+                                <connections>
+                                    <action selector="registerWithGoogleButton:" destination="qPA-QD-gB5" eventType="touchUpInside" id="LVk-GT-TMe"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="313-nG-bMd">
+                                <rect key="frame" x="36" y="84" width="30" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GQx-VV-FMI">
+                                <rect key="frame" x="36" y="55" width="30" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="back button"/>
+                                <connections>
+                                    <action selector="backButton:" destination="qPA-QD-gB5" eventType="touchUpInside" id="nhS-7A-gBo"/>
+                                    <segue destination="BYZ-38-t0r" kind="presentation" identifier="toLogin" modalPresentationStyle="fullScreen" id="wJE-6f-u8f"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="PiF-C6-6dH"/>
                     </view>
+                    <navigationItem key="navigationItem" id="eQB-Rv-0yj"/>
+                    <connections>
+                        <outlet property="emailField" destination="Y6p-UY-ybR" id="Ygc-Hv-Bp2"/>
+                        <outlet property="passwordField" destination="IUV-4J-8eF" id="Ovp-Vf-ver"/>
+                        <outlet property="usernameField" destination="HVC-qs-7zb" id="iCb-dA-jWO"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1fR-hR-CBX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="847" y="140"/>
+            <point key="canvasLocation" x="846.37681159420299" y="139.95535714285714"/>
         </scene>
     </scenes>
     <resources>
@@ -117,7 +209,11 @@
         <image name="Group 161" width="391" height="252"/>
         <image name="Logo-1" width="285" height="228"/>
         <image name="Rectangle 1" width="256" height="61"/>
+        <image name="Register" width="256" height="61"/>
+        <image name="Register with Google" width="256" height="61"/>
         <image name="avatar" width="18" height="18"/>
+        <image name="back button" width="27" height="27"/>
+        <image name="envelope" width="18" height="18"/>
         <image name="glasses" width="18" height="18"/>
         <image name="here.." width="31" height="14"/>
     </resources>
