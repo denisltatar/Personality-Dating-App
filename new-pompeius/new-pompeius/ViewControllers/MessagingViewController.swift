@@ -17,4 +17,11 @@ class MessagingViewController: UIViewController {
         // Do any additional setup after loading the view.
         
     }
+    
+    @IBAction func exploreButton(_ sender: Any) {
+    }
+    
+    @IBAction func settingsButton(_ sender: Any) {
+    }
+    
 }

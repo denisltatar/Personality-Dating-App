@@ -1,5 +1,5 @@
 //
-//  MyProfileViewController.swift
+//  ExploreViewController.swift
 //  new-pompeius
 //
 //  Created by Denis Tatar on 2020-08-28.
@@ -9,7 +9,7 @@
 import UIKit
 import Firebase
 
-class MyProfileViewController: UIViewController {
+class ExploreViewController: UIViewController {
 
     
     override func viewDidLoad() {
@@ -18,4 +18,10 @@ class MyProfileViewController: UIViewController {
         
     }
 
+    @IBAction func messagesButton(_ sender: Any) {
+    }
+    
+    
+    @IBAction func settingsButton(_ sender: Any) {
+    }
 }
