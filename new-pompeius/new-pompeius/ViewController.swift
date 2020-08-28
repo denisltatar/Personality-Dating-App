@@ -8,9 +8,12 @@
 
 import UIKit
 import Firebase
+import GoogleSignIn
 
 class ViewController: UIViewController {
 
+    @IBOutlet var googleSignInButton: GIDSignInButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -18,6 +21,9 @@ class ViewController: UIViewController {
         // Initiating our textfields
         usernameField.delegate = self
         passwordField.delegate = self
+        
+        // Telling our view controller that this is where we want the option of signing in with Google to appear
+        GIDSignIn.sharedInstance()?.presentingViewController = self;
         
     }
 
