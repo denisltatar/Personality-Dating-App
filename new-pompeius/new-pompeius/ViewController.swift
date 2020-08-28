@@ -7,23 +7,52 @@
 //
 
 import UIKit
+import Firebase
 
 class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        
+        // Initiating our textfields
+        usernameField.delegate = self
+        passwordField.delegate = self
+        
     }
 
     @IBOutlet weak var usernameField: UITextField!
     @IBOutlet weak var passwordField: UITextField!
     
     @IBAction func loginButton(_ sender: Any) {
-    }
+        /*
+        Auth.auth().signIn(withEmail: usernameField, password: passwordField) { (result, error) in
+            if error != nil {
+                // self.alertMessage = error?.localize
+            }*/
+        }
     @IBAction func loginGoogleButton(_ sender: Any) {
     }
+    
     @IBAction func registerHereButton(_ sender: Any) {
         print("Here was tapped")
     }
+    
+    // Touch outside of text to dismiss keyboard (you can also hit "return")
+    // https://www.youtube.com/watch?v=uVCFV668dSQ
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+            usernameField.resignFirstResponder()
+            passwordField.resignFirstResponder()
+    }
+    
 }
 
+// Helping with dismissing our keyboard through a tap
+// https://www.youtube.com/watch?v=uVCFV668dSQ
+extension ViewController: UITextFieldDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        // Getting rid of the actual keyboard
+        textField.resignFirstResponder()
+        return true
+    }
+}

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>931133640487-mmhjss6e3u49gvk621f8526ttfgn9im6.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.931133640487-mmhjss6e3u49gvk621f8526ttfgn9im6</string>
+	<key>API_KEY</key>
+	<string>AIzaSyDddz8JB1jLkw4C1ntL2CreUBGPOd3Ho-w</string>
+	<key>GCM_SENDER_ID</key>
+	<string>931133640487</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.denistatar.new-pompeius</string>
+	<key>PROJECT_ID</key>
+	<string>pompeius-e4abd</string>
+	<key>STORAGE_BUCKET</key>
+	<string>pompeius-e4abd.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:931133640487:ios:ddba06c10a20130850a302</string>
+	<key>DATABASE_URL</key>
+	<string>https://pompeius-e4abd.firebaseio.com</string>
+</dict>
+</plist>
