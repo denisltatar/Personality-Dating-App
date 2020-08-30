@@ -23,7 +23,7 @@ class registerViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        // Hid the error label
+        // Hidding the error label
         errorLabel.alpha = 0
         
         // Initializing our data fields

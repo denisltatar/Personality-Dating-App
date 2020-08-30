@@ -144,9 +144,9 @@
 			children = (
 				17CA1A4D24F9573200856B9E /* MessagingViewController.swift */,
 				17CA1A5324F9907A00856B9E /* MyProfileViewController.swift */,
+				17CA1A4B24F88C8400856B9E /* registerViewController.swift */,
 				17CF916524F9AA5800FF468B /* ExploreViewController.swift */,
 				17CF916324F9A97400FF468B /* SettingsViewController.swift */,
-				17CA1A4B24F88C8400856B9E /* registerViewController.swift */,
 				17CA1A2B24F8226A00856B9E /* ViewController.swift */,
 			);
 			path = ViewControllers;
