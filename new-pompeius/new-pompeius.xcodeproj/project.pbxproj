@@ -22,8 +22,8 @@
 		17CA1A5624F9929200856B9E /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17CA1A5524F9929200856B9E /* Constants.swift */; };
 		17CF916424F9A97400FF468B /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17CF916324F9A97400FF468B /* SettingsViewController.swift */; };
 		17CF916624F9AA5800FF468B /* ExploreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17CF916524F9AA5800FF468B /* ExploreViewController.swift */; };
-		4347F254907433847B3FAAFB /* Pods_new_pompeiusTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2BF3B1AFE6EC54D79EE75081 /* Pods_new_pompeiusTests.framework */; };
-		A17103E97DA018C1A28A78DF /* Pods_new_pompeius.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B96B408C1F914E726760492 /* Pods_new_pompeius.framework */; };
+		4F6772EAC57BDCB1F9A69761 /* Pods_new_pompeius.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 53DCD554CB0F8CE7E6129DF0 /* Pods_new_pompeius.framework */; };
+		F2384B53F6C996EA48AF547F /* Pods_new_pompeiusTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AAF0FD2B84012D565ACE9A92 /* Pods_new_pompeiusTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,6 +37,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0B965BC53ABE4CF806C3AA31 /* Pods-new-pompeius.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-new-pompeius.debug.xcconfig"; path = "Target Support Files/Pods-new-pompeius/Pods-new-pompeius.debug.xcconfig"; sourceTree = "<group>"; };
 		17CA1A2424F8226A00856B9E /* new-pompeius.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "new-pompeius.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		17CA1A2724F8226A00856B9E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		17CA1A2924F8226A00856B9E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -56,12 +57,11 @@
 		17CA1A5524F9929200856B9E /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		17CF916324F9A97400FF468B /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		17CF916524F9AA5800FF468B /* ExploreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreViewController.swift; sourceTree = "<group>"; };
-		2B96B408C1F914E726760492 /* Pods_new_pompeius.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_new_pompeius.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		2BF3B1AFE6EC54D79EE75081 /* Pods_new_pompeiusTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_new_pompeiusTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		41BAEBD8ED7C7AE827733283 /* Pods-new-pompeius.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-new-pompeius.debug.xcconfig"; path = "Target Support Files/Pods-new-pompeius/Pods-new-pompeius.debug.xcconfig"; sourceTree = "<group>"; };
-		B62237AF5B5B85B472B57570 /* Pods-new-pompeiusTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-new-pompeiusTests.release.xcconfig"; path = "Target Support Files/Pods-new-pompeiusTests/Pods-new-pompeiusTests.release.xcconfig"; sourceTree = "<group>"; };
-		DD955AF0812E9C1ACC0B1458 /* Pods-new-pompeiusTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-new-pompeiusTests.debug.xcconfig"; path = "Target Support Files/Pods-new-pompeiusTests/Pods-new-pompeiusTests.debug.xcconfig"; sourceTree = "<group>"; };
-		EA09F696E1AC5C36250C7AA9 /* Pods-new-pompeius.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-new-pompeius.release.xcconfig"; path = "Target Support Files/Pods-new-pompeius/Pods-new-pompeius.release.xcconfig"; sourceTree = "<group>"; };
+		53DCD554CB0F8CE7E6129DF0 /* Pods_new_pompeius.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_new_pompeius.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7D4D70024AB2BE6CAA7F2753 /* Pods-new-pompeiusTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-new-pompeiusTests.debug.xcconfig"; path = "Target Support Files/Pods-new-pompeiusTests/Pods-new-pompeiusTests.debug.xcconfig"; sourceTree = "<group>"; };
+		807E6F99E031675715BDA728 /* Pods-new-pompeiusTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-new-pompeiusTests.release.xcconfig"; path = "Target Support Files/Pods-new-pompeiusTests/Pods-new-pompeiusTests.release.xcconfig"; sourceTree = "<group>"; };
+		AAF0FD2B84012D565ACE9A92 /* Pods_new_pompeiusTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_new_pompeiusTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BA6402CE392975BD22D0451D /* Pods-new-pompeius.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-new-pompeius.release.xcconfig"; path = "Target Support Files/Pods-new-pompeius/Pods-new-pompeius.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,7 +69,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A17103E97DA018C1A28A78DF /* Pods_new_pompeius.framework in Frameworks */,
+				4F6772EAC57BDCB1F9A69761 /* Pods_new_pompeius.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -77,13 +77,22 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4347F254907433847B3FAAFB /* Pods_new_pompeiusTests.framework in Frameworks */,
+				F2384B53F6C996EA48AF547F /* Pods_new_pompeiusTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		043A8BD30CE64AB815668A6C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				53DCD554CB0F8CE7E6129DF0 /* Pods_new_pompeius.framework */,
+				AAF0FD2B84012D565ACE9A92 /* Pods_new_pompeiusTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		17CA1A1B24F8226900856B9E = {
 			isa = PBXGroup;
 			children = (
@@ -91,7 +100,7 @@
 				17CA1A3D24F8226E00856B9E /* new-pompeiusTests */,
 				17CA1A2524F8226A00856B9E /* Products */,
 				8576787F4A4D09A5FF0462F9 /* Pods */,
-				E08ECC6DD05BE5EE6C1ED27F /* Frameworks */,
+				043A8BD30CE64AB815668A6C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -155,21 +164,12 @@
 		8576787F4A4D09A5FF0462F9 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				41BAEBD8ED7C7AE827733283 /* Pods-new-pompeius.debug.xcconfig */,
-				EA09F696E1AC5C36250C7AA9 /* Pods-new-pompeius.release.xcconfig */,
-				DD955AF0812E9C1ACC0B1458 /* Pods-new-pompeiusTests.debug.xcconfig */,
-				B62237AF5B5B85B472B57570 /* Pods-new-pompeiusTests.release.xcconfig */,
+				0B965BC53ABE4CF806C3AA31 /* Pods-new-pompeius.debug.xcconfig */,
+				BA6402CE392975BD22D0451D /* Pods-new-pompeius.release.xcconfig */,
+				7D4D70024AB2BE6CAA7F2753 /* Pods-new-pompeiusTests.debug.xcconfig */,
+				807E6F99E031675715BDA728 /* Pods-new-pompeiusTests.release.xcconfig */,
 			);
 			path = Pods;
-			sourceTree = "<group>";
-		};
-		E08ECC6DD05BE5EE6C1ED27F /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				2B96B408C1F914E726760492 /* Pods_new_pompeius.framework */,
-				2BF3B1AFE6EC54D79EE75081 /* Pods_new_pompeiusTests.framework */,
-			);
-			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -179,12 +179,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 17CA1A4324F8226E00856B9E /* Build configuration list for PBXNativeTarget "new-pompeius" */;
 			buildPhases = (
-				6F746E3784D1E77F11B479FF /* [CP] Check Pods Manifest.lock */,
+				59279AB6593D450E0E03C4AB /* [CP] Check Pods Manifest.lock */,
 				17CA1A2024F8226A00856B9E /* Sources */,
 				17CA1A2124F8226A00856B9E /* Frameworks */,
 				17CA1A2224F8226A00856B9E /* Resources */,
-				164074067B5FE6C62D91A260 /* [CP] Embed Pods Frameworks */,
-				EB93E2BF5CA13A850EBF216D /* [CP] Copy Pods Resources */,
+				1E627337B62984FA19865062 /* [CP] Embed Pods Frameworks */,
+				00AE92C289E999C055486572 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -199,7 +199,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 17CA1A4624F8226E00856B9E /* Build configuration list for PBXNativeTarget "new-pompeiusTests" */;
 			buildPhases = (
-				5E9748B5D17D8CD9B90F1C23 /* [CP] Check Pods Manifest.lock */,
+				240EB243A9D1893C9C517562 /* [CP] Check Pods Manifest.lock */,
 				17CA1A3624F8226E00856B9E /* Sources */,
 				17CA1A3724F8226E00856B9E /* Frameworks */,
 				17CA1A3824F8226E00856B9E /* Resources */,
@@ -274,7 +274,24 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		164074067B5FE6C62D91A260 /* [CP] Embed Pods Frameworks */ = {
+		00AE92C289E999C055486572 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-new-pompeius/Pods-new-pompeius-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-new-pompeius/Pods-new-pompeius-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-new-pompeius/Pods-new-pompeius-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		1E627337B62984FA19865062 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -291,7 +308,7 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-new-pompeius/Pods-new-pompeius-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		5E9748B5D17D8CD9B90F1C23 /* [CP] Check Pods Manifest.lock */ = {
+		240EB243A9D1893C9C517562 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -313,7 +330,7 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		6F746E3784D1E77F11B479FF /* [CP] Check Pods Manifest.lock */ = {
+		59279AB6593D450E0E03C4AB /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -333,23 +350,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		EB93E2BF5CA13A850EBF216D /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-new-pompeius/Pods-new-pompeius-resources-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-new-pompeius/Pods-new-pompeius-resources-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-new-pompeius/Pods-new-pompeius-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -526,7 +526,7 @@
 		};
 		17CA1A4424F8226E00856B9E /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 41BAEBD8ED7C7AE827733283 /* Pods-new-pompeius.debug.xcconfig */;
+			baseConfigurationReference = 0B965BC53ABE4CF806C3AA31 /* Pods-new-pompeius.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -545,7 +545,7 @@
 		};
 		17CA1A4524F8226E00856B9E /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = EA09F696E1AC5C36250C7AA9 /* Pods-new-pompeius.release.xcconfig */;
+			baseConfigurationReference = BA6402CE392975BD22D0451D /* Pods-new-pompeius.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -564,7 +564,7 @@
 		};
 		17CA1A4724F8226E00856B9E /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = DD955AF0812E9C1ACC0B1458 /* Pods-new-pompeiusTests.debug.xcconfig */;
+			baseConfigurationReference = 7D4D70024AB2BE6CAA7F2753 /* Pods-new-pompeiusTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -587,7 +587,7 @@
 		};
 		17CA1A4824F8226E00856B9E /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B62237AF5B5B85B472B57570 /* Pods-new-pompeiusTests.release.xcconfig */;
+			baseConfigurationReference = 807E6F99E031675715BDA728 /* Pods-new-pompeiusTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";

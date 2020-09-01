@@ -12,13 +12,16 @@ import FirebaseAuth
 
 class registerViewController: UIViewController {
     
+    // Our variables
     @IBOutlet weak var firstNameField: UITextField!
     @IBOutlet weak var lastNameField: UITextField!
     @IBOutlet weak var passwordField: UITextField!
     @IBOutlet weak var emailField: UITextField!
-    
     @IBOutlet weak var errorLabel: UILabel!
     
+    // var userDocId = ""
+    // Our userDocId
+    var userDocId:String = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,6 +35,7 @@ class registerViewController: UIViewController {
         lastNameField.delegate = self
         passwordField.delegate = self
         emailField.delegate = self
+        
     }
         
     // Check the fields and validate that the data is correct. If everything
@@ -66,6 +70,7 @@ class registerViewController: UIViewController {
              // There is an error, show the error message
             showError(error!)
         } else {
+            
             // Create cleaned versions of the data
             // let username = usernameField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
             let firstName = firstNameField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
@@ -74,6 +79,8 @@ class registerViewController: UIViewController {
             let email = emailField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
             
             
+            
+            // ADDING NEW USER TO CLOUD FIRESTORE (OLD METHOD USING REALTIME NOW)
             // Create the user
             Auth.auth().createUser(withEmail: email, password: password) { (result, err) in
                 // Check for errors
@@ -85,16 +92,38 @@ class registerViewController: UIViewController {
                     let db = Firestore.firestore()
                     
                     db.collection("users").addDocument(data: ["firstName" : firstName, "lastName" : lastName, "uid" :  result!.user.uid]) { (error) in
-                        
                         if error != nil {
                             self.showError("User's name could not be uploaded to database")
                         }
                     }
                     
+                    // For testing purposes
+                    let userDocId = db.collection("users").document().documentID
+                    print("userDocId is: " + userDocId)
+                    
+                    
+                    // Sending data to our 'MyProfileVC'
+                    let vc = MyProfileViewController(nibName: "MyProfileViewController", bundle: nil)
+                    vc.currentUserDocId = userDocId
+                    
+                    // navigationController?.pushViewController(vc, animated: true)
                     
                     // Transition to the "my profile" view controller
                     self.transitionToNextView()
                 }
+                
+                
+            /*
+            // ADDING NEW USER TO REALTIME DATABASE
+            let ref = Database.database().reference()
+            
+            let firstname = self.firstNameField.text?.trimmingCharacters(in: .whitespacesAndNewlines)
+            let lastname = self.lastNameField.text?.trimmingCharacters(in: .whitespacesAndNewlines)
+            
+            // Updating our data in Firebase Realtime database
+            ref.childByAutoId().setValue(["firstName" : firstname, "lastName" : lastname]) */
+                
+                
             }
         }
     }

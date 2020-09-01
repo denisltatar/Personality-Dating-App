@@ -15,6 +15,8 @@ class ViewController: UIViewController {
 
     @IBOutlet var googleSignInButton: GIDSignInButton!
     @IBOutlet weak var errorLabel: UILabel!
+    @IBOutlet weak var emailField: UITextField!
+    @IBOutlet weak var passwordField: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,10 +39,13 @@ class ViewController: UIViewController {
         // Telling our view controller that this is where we want the option of signing in with Google to appear
         GIDSignIn.sharedInstance()?.presentingViewController = self;
         
+        
+        // New Real-time Data Method
+        // let ref = Database.database().reference()
+        
+        // ref.childByAutoId().setValue(["email" :emailField, "password" : passwordField])
+        
     }
-
-    @IBOutlet weak var emailField: UITextField!
-    @IBOutlet weak var passwordField: UITextField!
     
     // Check the fields and validate that the data is correct. If everything
     // if correct, this function returns nil, otherwise it returns the error message
