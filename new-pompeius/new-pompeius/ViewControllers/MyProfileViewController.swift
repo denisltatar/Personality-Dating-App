@@ -13,6 +13,11 @@ import Firebase
 class MyProfileViewController: UIViewController {
 
     @IBOutlet weak var occupationTextField: UITextField!
+    @IBOutlet weak var ageTextField: UITextField!
+    @IBOutlet weak var heightTextField: UITextField!
+    @IBOutlet weak var genderTextField: UITextField!
+    @IBOutlet weak var countryOriginTextField: UITextField!
+    @IBOutlet weak var countryRaisedTextField: UITextField!
     @IBOutlet weak var errorLabel: UILabel!
     
     // Creating our reference which we'll need to grab data from current user
@@ -33,6 +38,11 @@ class MyProfileViewController: UIViewController {
         errorLabel.alpha = 0
         
         occupationTextField.delegate = self
+        ageTextField.delegate = self
+        heightTextField.delegate = self
+        genderTextField.delegate = self
+        countryOriginTextField.delegate = self
+        countryRaisedTextField.delegate = self
 
         // ref = Database.database().reference()
         usersRef = Database.database().reference().child("users")
@@ -52,7 +62,12 @@ class MyProfileViewController: UIViewController {
     // Check if occupation was empty
     func validateFields() -> String? {
         // Check that all fields are filled in!
-        if occupationTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == " " {
+        if occupationTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == " " ||
+            ageTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == " " ||
+            heightTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == " " ||
+            genderTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == " " ||
+            countryOriginTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == " " ||
+            countryRaisedTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == " " {
             return "Please fill in all fields."
         }
         
@@ -70,6 +85,11 @@ class MyProfileViewController: UIViewController {
         } else {
             // Create cleaned versions of the data
             let occupation = occupationTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
+            let age = ageTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
+            let height = heightTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
+            let gender = genderTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
+            let countryOrigin = countryOriginTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
+            let countryRaised = countryRaisedTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
                         
             // Grabbing the current user's data
             let user = Auth.auth().currentUser
@@ -124,7 +144,8 @@ class MyProfileViewController: UIViewController {
                 // NEW METHOD
              //   currDoc.setData(["occupation" : occupation], merge: true)
                 
-               db.collection("users").document("new").setData(["occupation" : occupation], merge: true)
+                db.collection("users").document("new").setData(["occupation" : occupation, "age" : age, "height" : height,
+                                                                "gender" : gender, "country of origin" : countryOrigin, "country raised in" : countryRaised], merge: true)
                 
                 
                 // db.collection("users").getDocuments(completion: <#T##FIRQuerySnapshotBlock##FIRQuerySnapshotBlock##(QuerySnapshot?, Error?) -> Void#>)
@@ -154,6 +175,11 @@ class MyProfileViewController: UIViewController {
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
             // usernameField.resignFirstResponder()
             occupationTextField.resignFirstResponder()
+            ageTextField.resignFirstResponder()
+            heightTextField.resignFirstResponder()
+            genderTextField.resignFirstResponder()
+            countryOriginTextField.resignFirstResponder()
+            countryRaisedTextField.resignFirstResponder()
     }
 }
 
