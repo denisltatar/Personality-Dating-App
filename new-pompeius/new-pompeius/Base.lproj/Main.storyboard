@@ -158,6 +158,7 @@
                                 <state key="normal" image="Register"/>
                                 <connections>
                                     <action selector="registerButton:" destination="qPA-QD-gB5" eventType="touchUpInside" id="3Lr-Zv-YM8"/>
+                                    <segue destination="2Y7-1a-zwb" kind="presentation" identifier="toMyProfile" modalPresentationStyle="fullScreen" id="XIr-Eb-bl9"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OfW-TO-Ag6">
@@ -336,7 +337,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ETC-m4-VV2">
-                                <rect key="frame" x="176" y="175" width="0.0" height="0.0"/>
+                                <rect key="frame" x="61" y="165" width="274" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>

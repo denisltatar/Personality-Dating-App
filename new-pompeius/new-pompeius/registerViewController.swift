@@ -21,7 +21,9 @@ class registerViewController: UIViewController {
     
     // var userDocId = ""
     // Our userDocId
-    var userDocId:String = ""
+    // User was created successfully, store the information properly
+    // var randomText:String = "This is random text"
+    var docID:String = "Default Value"
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -88,28 +90,48 @@ class registerViewController: UIViewController {
                     // There was an error in creating the user
                     self.showError("Email has been used already")
                 } else {
-                    // User was created successfully, store the information properly
-                    let db = Firestore.firestore()
                     
-                    db.collection("users").addDocument(data: ["firstName" : firstName, "lastName" : lastName, "uid" :  result!.user.uid]) { (error) in
+                    let db = Firestore.firestore()
+                    // Creating a new document ID so we can add to it afterwards
+                    // INSTEAD OF DOING THIS, WE CAN JUST GIVE IT A NAME, A CUSTOM NAME
+                    let newDocument = db.collection("users").document("new")
+                    // Grabbing the string version of this document ID
+              //      let strNewDocument = db.collection("users").document().documentID
+              //      print("This is the string version of the Doc ID: " + strNewDocument)
+                    // Setting docID equal to this string we just formed to send to 'MyProfileViewController'
+              //      self.docID = strNewDocument
+                    
+                    newDocument.setData(["firstName" : firstName, "lastName" : lastName, "uid" :  result!.user.uid]) { (error) in
                         if error != nil {
                             self.showError("User's name could not be uploaded to database")
                         }
                     }
                     
+                    
+                    // OLD METHOD OF CREATING A NEW DOC WHICH REPRESENTS THE CURRENT USER
+                    /*
+                    db.collection("users").addDocument(data: ["firstName" : firstName, "lastName" : lastName, "uid" :  result!.user.uid]) { (error) in
+                        if error != nil {
+                            self.showError("User's name could not be uploaded to database")
+                        }
+                    } */
+                    
                     // For testing purposes
-                    let userDocId = db.collection("users").document().documentID
-                    print("userDocId is: " + userDocId)
+                    // let userDocId = db.collection("users").document().documentID
+                    // let strNewDocument = db.collection("users").document().documentID
+              //      print("First View Controller User Doc ID: " + self.docID)
                     
                     
                     // Sending data to our 'MyProfileVC'
+                    /*
                     let vc = MyProfileViewController(nibName: "MyProfileViewController", bundle: nil)
-                    vc.currentUserDocId = userDocId
+                    vc.currentUserDocId = firstName */
                     
                     // navigationController?.pushViewController(vc, animated: true)
                     
                     // Transition to the "my profile" view controller
-                    self.transitionToNextView()
+                    // self.transitionToNextView()
+                    self.newTrasitionToNextView()
                 }
                 
                 
@@ -128,6 +150,16 @@ class registerViewController: UIViewController {
         }
     }
     
+    func getDocID() -> String {
+        let db = Firestore.firestore()
+        // Grabbing the string version of this document ID
+        let strNewDocument = db.collection("users").document().documentID
+        // Setting docID equal to this string we just formed to send to 'MyProfileViewController'
+        self.docID = strNewDocument
+        print("First View Controller User Doc ID: " + strNewDocument)
+        return docID
+    }
+    
     
     // Function used to show the error message if one exists
     func showError (_ message:String) {
@@ -137,13 +169,28 @@ class registerViewController: UIViewController {
     
     func transitionToNextView() {
         // Creating a reference to "myProfileViewController" within our storyboard
-        let  myProfileViewController = storyboard?.instantiateViewController(identifier: Constants.Storyboard.myProfileViewController) as? MyProfileViewController
+        let myProfileViewController = storyboard?.instantiateViewController(identifier: Constants.Storyboard.myProfileViewController) as? MyProfileViewController
         
         // Swap out the root view controller
         view.window?.rootViewController = myProfileViewController
         view.window?.makeKeyAndVisible()
     }
     
+    // This is used within our 'Register' button tap
+    func newTrasitionToNextView(){
+        self.performSegue(withIdentifier: "toMyProfile", sender: self)
+    }
+    
+  
+    // This will be called when 'toMyProfile' segue is used
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        // Another method
+        if segue.identifier == "toMyProfile" {
+            let vc = segue.destination as! MyProfileViewController
+            let docID = getDocID()
+            vc.currentUserDocId = docID
+        }
+    }
     
     
     @IBAction func registerWithGoogleButton(_ sender: Any) {

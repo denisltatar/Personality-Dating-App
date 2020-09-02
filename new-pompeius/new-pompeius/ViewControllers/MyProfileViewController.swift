@@ -21,6 +21,8 @@ class MyProfileViewController: UIViewController {
     
     // Used for moving data over userDocId to be specific
     var currentUserDocId:String = ""
+    
+    
     @IBOutlet weak var textLabel: UILabel?
     
     override func viewDidLoad() {
@@ -35,10 +37,9 @@ class MyProfileViewController: UIViewController {
         // ref = Database.database().reference()
         usersRef = Database.database().reference().child("users")
         
-        // Used for moving over data from 'registerViewController'
-        textLabel?.text = currentUserDocId
-        
-        print("String value of currentUserDocId:" + currentUserDocId)
+        // Used for moving over data from 'registerViewController' and into a textLabel
+        // textLabel?.text = currentUserDocId
+    
         
     }
     
@@ -86,6 +87,7 @@ class MyProfileViewController: UIViewController {
                 print("We are about to update Firebase with the occupation: " + occupation)
                 // usersRef?.child(uid).setValue(["occupation" : occupation])
                 
+                print("Second View Controller User Doc ID: " + self.currentUserDocId)
                 
                 
                 
@@ -93,6 +95,10 @@ class MyProfileViewController: UIViewController {
                 let db = Firestore.firestore()
                 
                 
+                // Getting the current user's document ID so we can add fields to their data
+            //    let currDoc = db.collection("users").document()
+            //    let strNewDocument = db.collection("users").document().documentID
+            //    print("strNewDocument is: " + strNewDocument)
                 
                 
                 // Assessing the current user's data so that we can add to it.
@@ -103,15 +109,23 @@ class MyProfileViewController: UIViewController {
                 // Adding to the user's UID
                 // self.db.child("users").child(user!.uid).setValue(["occupation": occupation])
                 
-                // Grabbing the current user's document value (from 'registerViewController')
+                // Grabbing the current +user's document value (from 'registerViewController')
                 // let userDocId = db.collection("users").document().documentID
     
-                print("currentUserDocId is: " + currentUserDocId)
                 // db.collection("users").document(userDocId).updateData(["occupation" : occupation])
                 
                 // If the document does not exist, it will be created. If the document does exist, its contents will be overwritten
                 // with the newly provided data, unless you specify that the data should be merged into the existing document, as follows:
-                db.collection("users").document(currentUserDocId).setData(["occupation" : occupation], merge: true)
+                
+                // OLD METHOD
+                // db.collection("users").document(userDocId).setData(["occupation" : occupation], merge: true)
+                
+                
+                // NEW METHOD
+             //   currDoc.setData(["occupation" : occupation], merge: true)
+                
+               db.collection("users").document("new").setData(["occupation" : occupation], merge: true)
+                
                 
                 // db.collection("users").getDocuments(completion: <#T##FIRQuerySnapshotBlock##FIRQuerySnapshotBlock##(QuerySnapshot?, Error?) -> Void#>)
                 /*
