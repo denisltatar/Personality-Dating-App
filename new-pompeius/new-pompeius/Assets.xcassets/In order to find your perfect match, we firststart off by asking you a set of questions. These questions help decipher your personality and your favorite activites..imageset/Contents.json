@@ -1,0 +1,23 @@
+{
+  "images" : [
+    {
+      "filename" : "In order to find your perfect match, we firststart off by asking you a set of questions. These questions help decipher your personality and your favorite activites..png",
+      "idiom" : "universal",
+      "scale" : "1x"
+    },
+    {
+      "filename" : "In order to find your perfect match, we firststart off by asking you a set of questions. These questions help decipher your personality and your favorite activites.@2x.png",
+      "idiom" : "universal",
+      "scale" : "2x"
+    },
+    {
+      "filename" : "In order to find your perfect match, we firststart off by asking you a set of questions. These questions help decipher your personality and your favorite activites.@3x.png",
+      "idiom" : "universal",
+      "scale" : "3x"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

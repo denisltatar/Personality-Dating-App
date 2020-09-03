@@ -59,7 +59,7 @@ class MyProfileViewController: UIViewController {
         errorLabel.alpha = 1
     }
     
-    // Check if occupation was empty
+    // Check if any fields were empty
     func validateFields() -> String? {
         // Check that all fields are filled in!
         if occupationTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == " " ||
@@ -72,6 +72,11 @@ class MyProfileViewController: UIViewController {
         }
         
         return nil
+    }
+    
+    
+    @IBAction func backButton(_ sender: Any) {
+        self.performSegue(withIdentifier: "backToRegister", sender: self)
     }
     
     
@@ -163,6 +168,7 @@ class MyProfileViewController: UIViewController {
             
             // Transition to the "my profile" view controller
             // self.transitionToNextView()
+            self.performSegue(withIdentifier: "continueProfile", sender: self)
         }
     }
     
