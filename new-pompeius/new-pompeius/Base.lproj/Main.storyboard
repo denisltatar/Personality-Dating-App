@@ -340,7 +340,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="words"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Italy" textAlignment="center" minimumFontSize="17" background="Rectangle 2" translatesAutoresizingMaskIntoConstraints="NO" id="WaD-zF-Q4e">
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Romania" textAlignment="center" minimumFontSize="17" background="Rectangle 2" translatesAutoresizingMaskIntoConstraints="NO" id="WaD-zF-Q4e">
                                 <rect key="frame" x="208" y="441" width="176" height="43"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
@@ -378,6 +378,10 @@
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="My Profile" translatesAutoresizingMaskIntoConstraints="NO" id="f2F-Y4-BzB">
                                 <rect key="frame" x="158" y="57" width="99" height="53"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Group 120" translatesAutoresizingMaskIntoConstraints="NO" id="DPY-ZZ-Wcn">
+                                <rect key="frame" x="-208" y="426" width="812" height="670"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                         </subviews>
@@ -748,8 +752,8 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="YrA-UL-Hbi"/>
-        <segue reference="zVE-cr-XtJ"/>
+        <segue reference="0mY-ut-H27"/>
+        <segue reference="bar-RY-Zbz"/>
         <segue reference="3ej-g7-4Di"/>
         <segue reference="R5V-5l-KHk"/>
         <segue reference="Eta-gL-lEt"/>
