@@ -12,6 +12,7 @@ import Firebase
 
 class MyProfileViewController: UIViewController {
 
+    @IBOutlet weak var avatar: UIImageView!
     @IBOutlet weak var occupationTextField: UITextField!
     @IBOutlet weak var ageTextField: UITextField!
     @IBOutlet weak var heightTextField: UITextField!
@@ -33,6 +34,7 @@ class MyProfileViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        setupAvatar()
         
         // Hidding the error label
         errorLabel.alpha = 0
@@ -77,6 +79,28 @@ class MyProfileViewController: UIViewController {
     
     @IBAction func backButton(_ sender: Any) {
         self.performSegue(withIdentifier: "backToRegister", sender: self)
+    }
+    
+    // Function that helps set up our user's profile picture (also known as an avatar)
+    func setupAvatar() {
+        avatar.layer.cornerRadius = 40
+        avatar.clipsToBounds = true
+        avatar.isUserInteractionEnabled = true
+        // self is MyProfileViewController itself
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(presentPicker))
+        avatar.addGestureRecognizer(tapGesture)
+    }
+    
+    @objc func presentPicker() {
+        let picker = UIImagePickerController()
+        // Opens up our photo library
+        picker.sourceType = .photoLibrary
+        // Allow the user to edit the selected photo
+        picker.allowsEditing = true
+        //
+        picker.delegate = self
+        // self.present(picker, animated: true, completion: nil)
+        self.present(picker, animated: true, completion: nil)
     }
     
     
@@ -200,3 +224,22 @@ extension MyProfileViewController: UITextFieldDelegate {
     }
 }
 
+
+
+// Saving the photo we picked from the photo library within our phone
+extension MyProfileViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        // Displaying the photo on the UIImageView
+        if let imageSelected = info[UIImagePickerController.InfoKey.editedImage] as? UIImage {
+            avatar.image = imageSelected
+        }
+        
+        /*
+        if let imageOriginal = info[UIImagePickerController.InfoKey.originalImage] as? UIImage {
+            avatar.image = imageOriginal
+        } */
+        
+        picker.dismiss(animated: true, completion: nil)
+        
+    }
+}

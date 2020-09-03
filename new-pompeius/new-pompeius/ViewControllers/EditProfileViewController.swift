@@ -8,7 +8,7 @@
 
 import Firebase
 
-class SettingViewController: UIViewController {
+class EditProfileViewController: UIViewController {
 
     
     override func viewDidLoad() {

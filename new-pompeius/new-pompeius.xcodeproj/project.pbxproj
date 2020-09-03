@@ -22,7 +22,7 @@
 		17CA1A5024F98A4700856B9E /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17CA1A4F24F98A4700856B9E /* Utilities.swift */; };
 		17CA1A5424F9907A00856B9E /* MyProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17CA1A5324F9907A00856B9E /* MyProfileViewController.swift */; };
 		17CA1A5624F9929200856B9E /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17CA1A5524F9929200856B9E /* Constants.swift */; };
-		17CF916424F9A97400FF468B /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17CF916324F9A97400FF468B /* SettingsViewController.swift */; };
+		17CF916424F9A97400FF468B /* EditProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17CF916324F9A97400FF468B /* EditProfileViewController.swift */; };
 		17CF916624F9AA5800FF468B /* ExploreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17CF916524F9AA5800FF468B /* ExploreViewController.swift */; };
 		4F6772EAC57BDCB1F9A69761 /* Pods_new_pompeius.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 53DCD554CB0F8CE7E6129DF0 /* Pods_new_pompeius.framework */; };
 		F2384B53F6C996EA48AF547F /* Pods_new_pompeiusTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AAF0FD2B84012D565ACE9A92 /* Pods_new_pompeiusTests.framework */; };
@@ -59,7 +59,7 @@
 		17CA1A4F24F98A4700856B9E /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
 		17CA1A5324F9907A00856B9E /* MyProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyProfileViewController.swift; sourceTree = "<group>"; };
 		17CA1A5524F9929200856B9E /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
-		17CF916324F9A97400FF468B /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		17CF916324F9A97400FF468B /* EditProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileViewController.swift; sourceTree = "<group>"; };
 		17CF916524F9AA5800FF468B /* ExploreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreViewController.swift; sourceTree = "<group>"; };
 		53DCD554CB0F8CE7E6129DF0 /* Pods_new_pompeius.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_new_pompeius.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7D4D70024AB2BE6CAA7F2753 /* Pods-new-pompeiusTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-new-pompeiusTests.debug.xcconfig"; path = "Target Support Files/Pods-new-pompeiusTests/Pods-new-pompeiusTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -161,7 +161,7 @@
 				17548B3A25006F2E00D518A0 /* SurveyIntroductionViewController.swift */,
 				17CA1A4B24F88C8400856B9E /* registerViewController.swift */,
 				17CF916524F9AA5800FF468B /* ExploreViewController.swift */,
-				17CF916324F9A97400FF468B /* SettingsViewController.swift */,
+				17CF916324F9A97400FF468B /* EditProfileViewController.swift */,
 				17CA1A2B24F8226A00856B9E /* ViewController.swift */,
 			);
 			path = ViewControllers;
@@ -376,7 +376,7 @@
 				17CA1A4E24F9573200856B9E /* MessagingViewController.swift in Sources */,
 				17CA1A4C24F88C8400856B9E /* registerViewController.swift in Sources */,
 				17CA1A5624F9929200856B9E /* Constants.swift in Sources */,
-				17CF916424F9A97400FF468B /* SettingsViewController.swift in Sources */,
+				17CF916424F9A97400FF468B /* EditProfileViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
