@@ -16,6 +16,7 @@ pod 'Firebase/Core'
 pod 'Firebase/Firestore'
 pod 'GoogleSignIn'
 pod 'Firebase/Database'
+pod 'Firebase/Storage'
 
   target 'new-pompeiusTests' do
     inherit! :search_paths

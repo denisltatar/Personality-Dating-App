@@ -9,6 +9,7 @@
 import UIKit
 import Firebase
 // import FirebaseDatabase
+import FirebaseStorage
 
 class MyProfileViewController: UIViewController {
 
@@ -28,8 +29,11 @@ class MyProfileViewController: UIViewController {
     // Used for moving data over userDocId to be specific
     var currentUserDocId:String = ""
     
-    
     @IBOutlet weak var textLabel: UILabel?
+    
+    
+    // Creating a variable to store the profile image selected by the user
+    var image: UIImage? = nil
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -82,6 +86,7 @@ class MyProfileViewController: UIViewController {
     }
     
     // Function that helps set up our user's profile picture (also known as an avatar)
+    // https://www.youtube.com/watch?v=0MrJFBGVuk4&ab_channel=Zero2Launch
     func setupAvatar() {
         avatar.layer.cornerRadius = 40
         avatar.clipsToBounds = true
@@ -91,6 +96,7 @@ class MyProfileViewController: UIViewController {
         avatar.addGestureRecognizer(tapGesture)
     }
     
+    // https://www.youtube.com/watch?v=0MrJFBGVuk4&ab_channel=Zero2Launch
     @objc func presentPicker() {
         let picker = UIImagePickerController()
         // Opens up our photo library
@@ -105,6 +111,18 @@ class MyProfileViewController: UIViewController {
     
     
     @IBAction func continueButton(_ sender: Any) {
+        
+        // Sending our profile image to Firestore
+        guard let imageSelected = self.image else {
+            print("Avatar is nil")
+            return
+        }
+        
+        // Saving our image into specific data type (jpeg data type)
+        guard let imageData = imageSelected.jpegData(compressionQuality: 0.4) else {
+            return
+        }
+        
         // Validate the fields entered
         let error = validateFields()
     
@@ -123,26 +141,70 @@ class MyProfileViewController: UIViewController {
             // Grabbing the current user's data
             let user = Auth.auth().currentUser
             
-            // Accessing the user's UID
-            // let uid = user!.uid
+            
             
             
             // Checking if the current user is still logged in
             // TODO: Finish the else case here!!
             if user != nil {
                 // User is signed in.
-                
-                // var reference: DatabaseReference?
+                // For testing
                 print("We are about to update Firebase with the occupation: " + occupation)
-                // usersRef?.child(uid).setValue(["occupation" : occupation])
-                
                 print("Second View Controller User Doc ID: " + self.currentUserDocId)
                 
                 
+                // Creating a dictionary to upload all at once
+                var userDictData: [String: Any] = [
+                    "occupation" : occupation,
+                    "age" : age,
+                    "height" : height,
+                    "gender" : gender,
+                    "country of origin" : countryOrigin,
+                    "country raised in" : countryRaised,
+                    "profileImageUrl" : ""
+                ]
                 
+                
+                // UPLOADING OUR PROFILE IMAGE AND DATA AT ONCE
+                // Making a reference to our root
+                let storageRef = Storage.storage().reference(forURL: "gs://pompeius-e4abd.appspot.com")
+                
+                // Creating a node of all profile photos
+                let uid = user!.uid
+                let storageProfileRef = storageRef.child("profiles").child(uid)
+                
+                // Create file metadata including the content type
+                let metadata = StorageMetadata()
+                metadata.contentType = "image/jpg"
+                storageProfileRef.putData(imageData, metadata: metadata) { (storageMetaData, error) in
+                    if error != nil {
+                        // Print out our error message
+                        print(error?.localizedDescription)
+                        return
+                    }
+                    
+                    // Saving the profile link to add to our current user
+                    storageProfileRef.downloadURL { (url, error) in
+                        if let metaImageUrl = url?.absoluteString {
+                            // Adding this new URL to our user's dictionary of data
+                            userDictData["profileImageUrl"] = metaImageUrl
+                            
+                            // Accessing the database
+                            let db = Firestore.firestore()
+                            
+                            // Uploading data to our database
+                            db.collection("users").document("new").setData(userDictData, merge: true)
+                        }
+                    }
+                    
+                }
+                
+                
+                
+                
+                // UPLOADING OUR PROFILE DATA
                 // Accessing the database
-                let db = Firestore.firestore()
-                
+  //              let db = Firestore.firestore()
                 
                 // Getting the current user's document ID so we can add fields to their data
             //    let currDoc = db.collection("users").document()
@@ -173,8 +235,9 @@ class MyProfileViewController: UIViewController {
                 // NEW METHOD
              //   currDoc.setData(["occupation" : occupation], merge: true)
                 
-                db.collection("users").document("new").setData(["occupation" : occupation, "age" : age, "height" : height,
-                                                                "gender" : gender, "country of origin" : countryOrigin, "country raised in" : countryRaised], merge: true)
+    //            db.collection("users").document("new").setData(["occupation" : occupation, "age" : age, "height" : height,
+    //                                                            "gender" : gender, "country of origin" : countryOrigin, "country raised in" : countryRaised,
+    //                                                            "profileImageUrl" : metaImageUrl], merge: true)
                 
                 
                 // db.collection("users").getDocuments(completion: <#T##FIRQuerySnapshotBlock##FIRQuerySnapshotBlock##(QuerySnapshot?, Error?) -> Void#>)
@@ -227,15 +290,22 @@ extension MyProfileViewController: UITextFieldDelegate {
 
 
 // Saving the photo we picked from the photo library within our phone
+// https://www.youtube.com/watch?v=0MrJFBGVuk4&ab_channel=Zero2Launch
 extension MyProfileViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         // Displaying the photo on the UIImageView
+        // We're basically saving the photo chosen to display in our little circle
         if let imageSelected = info[UIImagePickerController.InfoKey.editedImage] as? UIImage {
+            // Saving the chosen image to the image variable we created
+            image = imageSelected
+            // Displaying the image that was selected in the profile section circle
             avatar.image = imageSelected
         }
         
         /*
         if let imageOriginal = info[UIImagePickerController.InfoKey.originalImage] as? UIImage {
+            // Saving the chosen image to the image variable we created
+            image = imageSelected
             avatar.image = imageOriginal
         } */
         
