@@ -2,7 +2,10 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:/Users/denisltatar/Desktop/Personality Dating App/Personality-Dating-App/new-pompeius/new-pompeius/registerViewController.swift">
+      location = "group:/Users/denisltatar/Desktop/Personality Dating App/Personality-Dating-App/new-pompeius/new-pompeius/ViewControllers/registerViewController.swift">
+   </FileRef>
+   <FileRef
+      location = "absolute:/Users/denisltatar/Desktop/Personality Dating App/Personality-Dating-App/new-pompeius/new-pompeius/ViewControllers/registerViewController.swift">
    </FileRef>
    <FileRef
       location = "group:new-pompeius.xcodeproj">

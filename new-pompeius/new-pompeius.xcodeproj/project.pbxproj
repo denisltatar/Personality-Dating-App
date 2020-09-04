@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1715ADC72502C24C009B91D2 /* registerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1715ADC62502C24C009B91D2 /* registerViewController.swift */; };
+		1715ADCB2502C4F8009B91D2 /* Q1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1715ADCA2502C4F8009B91D2 /* Q1ViewController.swift */; };
 		17548B392500631600D518A0 /* MyProfile2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17548B382500631600D518A0 /* MyProfile2ViewController.swift */; };
 		17548B3B25006F2E00D518A0 /* SurveyIntroductionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17548B3A25006F2E00D518A0 /* SurveyIntroductionViewController.swift */; };
 		17CA1A2824F8226A00856B9E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17CA1A2724F8226A00856B9E /* AppDelegate.swift */; };
@@ -17,7 +19,6 @@
 		17CA1A3424F8226D00856B9E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 17CA1A3224F8226D00856B9E /* LaunchScreen.storyboard */; };
 		17CA1A3F24F8226E00856B9E /* new_pompeiusTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17CA1A3E24F8226E00856B9E /* new_pompeiusTests.swift */; };
 		17CA1A4A24F876F200856B9E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 17CA1A4924F876F200856B9E /* GoogleService-Info.plist */; };
-		17CA1A4C24F88C8400856B9E /* registerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17CA1A4B24F88C8400856B9E /* registerViewController.swift */; };
 		17CA1A4E24F9573200856B9E /* MessagingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17CA1A4D24F9573200856B9E /* MessagingViewController.swift */; };
 		17CA1A5024F98A4700856B9E /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17CA1A4F24F98A4700856B9E /* Utilities.swift */; };
 		17CA1A5424F9907A00856B9E /* MyProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17CA1A5324F9907A00856B9E /* MyProfileViewController.swift */; };
@@ -40,6 +41,8 @@
 
 /* Begin PBXFileReference section */
 		0B965BC53ABE4CF806C3AA31 /* Pods-new-pompeius.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-new-pompeius.debug.xcconfig"; path = "Target Support Files/Pods-new-pompeius/Pods-new-pompeius.debug.xcconfig"; sourceTree = "<group>"; };
+		1715ADC62502C24C009B91D2 /* registerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = registerViewController.swift; path = "/Users/denisltatar/Desktop/Personality Dating App/Personality-Dating-App/new-pompeius/new-pompeius/ViewControllers/registerViewController.swift"; sourceTree = "<absolute>"; };
+		1715ADCA2502C4F8009B91D2 /* Q1ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Q1ViewController.swift; sourceTree = "<group>"; };
 		17548B382500631600D518A0 /* MyProfile2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyProfile2ViewController.swift; sourceTree = "<group>"; };
 		17548B3A25006F2E00D518A0 /* SurveyIntroductionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyIntroductionViewController.swift; sourceTree = "<group>"; };
 		17CA1A2424F8226A00856B9E /* new-pompeius.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "new-pompeius.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -54,7 +57,6 @@
 		17CA1A3E24F8226E00856B9E /* new_pompeiusTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = new_pompeiusTests.swift; sourceTree = "<group>"; };
 		17CA1A4024F8226E00856B9E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		17CA1A4924F876F200856B9E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		17CA1A4B24F88C8400856B9E /* registerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = registerViewController.swift; path = "/Users/denisltatar/Desktop/Personality Dating App/Personality-Dating-App/new-pompeius/new-pompeius/registerViewController.swift"; sourceTree = "<absolute>"; };
 		17CA1A4D24F9573200856B9E /* MessagingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagingViewController.swift; sourceTree = "<group>"; };
 		17CA1A4F24F98A4700856B9E /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
 		17CA1A5324F9907A00856B9E /* MyProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyProfileViewController.swift; sourceTree = "<group>"; };
@@ -159,7 +161,8 @@
 				17CA1A5324F9907A00856B9E /* MyProfileViewController.swift */,
 				17548B382500631600D518A0 /* MyProfile2ViewController.swift */,
 				17548B3A25006F2E00D518A0 /* SurveyIntroductionViewController.swift */,
-				17CA1A4B24F88C8400856B9E /* registerViewController.swift */,
+				1715ADCA2502C4F8009B91D2 /* Q1ViewController.swift */,
+				1715ADC62502C24C009B91D2 /* registerViewController.swift */,
 				17CF916524F9AA5800FF468B /* ExploreViewController.swift */,
 				17CF916324F9A97400FF468B /* EditProfileViewController.swift */,
 				17CA1A2B24F8226A00856B9E /* ViewController.swift */,
@@ -370,13 +373,14 @@
 				17CA1A2C24F8226A00856B9E /* ViewController.swift in Sources */,
 				17548B392500631600D518A0 /* MyProfile2ViewController.swift in Sources */,
 				17CF916624F9AA5800FF468B /* ExploreViewController.swift in Sources */,
+				1715ADCB2502C4F8009B91D2 /* Q1ViewController.swift in Sources */,
 				17CA1A5424F9907A00856B9E /* MyProfileViewController.swift in Sources */,
 				17CA1A2824F8226A00856B9E /* AppDelegate.swift in Sources */,
 				17CA1A2A24F8226A00856B9E /* SceneDelegate.swift in Sources */,
 				17CA1A4E24F9573200856B9E /* MessagingViewController.swift in Sources */,
-				17CA1A4C24F88C8400856B9E /* registerViewController.swift in Sources */,
 				17CA1A5624F9929200856B9E /* Constants.swift in Sources */,
 				17CF916424F9A97400FF468B /* EditProfileViewController.swift in Sources */,
+				1715ADC72502C24C009B91D2 /* registerViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

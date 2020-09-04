@@ -2,6 +2,14 @@
 //  registerViewController.swift
 //  new-pompeius
 //
+//  Created by Denis Tatar on 2020-09-04.
+//  Copyright © 2020 Denis Tatar. All rights reserved.
+//
+
+//
+//  registerViewController.swift
+//  new-pompeius
+//
 //  Created by Denis Tatar on 2020-08-27.
 //  Copyright © 2020 Denis Tatar. All rights reserved.
 //
@@ -220,4 +228,3 @@ extension registerViewController: UITextFieldDelegate {
         return true
     }
 }
-
