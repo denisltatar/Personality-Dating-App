@@ -23,5 +23,6 @@ class SurveyIntroductionViewController: UIViewController {
     }
     
     @IBAction func beginSurveyButton(_ sender: Any) {
+        self.performSegue(withIdentifier: "toQuestions", sender: self)
     }
 }

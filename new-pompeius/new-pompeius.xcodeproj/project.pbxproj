@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		1715ADC72502C24C009B91D2 /* registerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1715ADC62502C24C009B91D2 /* registerViewController.swift */; };
 		1715ADCB2502C4F8009B91D2 /* Q1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1715ADCA2502C4F8009B91D2 /* Q1ViewController.swift */; };
+		172A6FBF2505BAA700D0651D /* Q2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 172A6FBE2505BAA700D0651D /* Q2ViewController.swift */; };
 		17548B392500631600D518A0 /* MyProfile2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17548B382500631600D518A0 /* MyProfile2ViewController.swift */; };
 		17548B3B25006F2E00D518A0 /* SurveyIntroductionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17548B3A25006F2E00D518A0 /* SurveyIntroductionViewController.swift */; };
 		17CA1A2824F8226A00856B9E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17CA1A2724F8226A00856B9E /* AppDelegate.swift */; };
@@ -43,6 +44,7 @@
 		0B965BC53ABE4CF806C3AA31 /* Pods-new-pompeius.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-new-pompeius.debug.xcconfig"; path = "Target Support Files/Pods-new-pompeius/Pods-new-pompeius.debug.xcconfig"; sourceTree = "<group>"; };
 		1715ADC62502C24C009B91D2 /* registerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = registerViewController.swift; path = "/Users/denisltatar/Desktop/Personality Dating App/Personality-Dating-App/new-pompeius/new-pompeius/ViewControllers/registerViewController.swift"; sourceTree = "<absolute>"; };
 		1715ADCA2502C4F8009B91D2 /* Q1ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Q1ViewController.swift; sourceTree = "<group>"; };
+		172A6FBE2505BAA700D0651D /* Q2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Q2ViewController.swift; sourceTree = "<group>"; };
 		17548B382500631600D518A0 /* MyProfile2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyProfile2ViewController.swift; sourceTree = "<group>"; };
 		17548B3A25006F2E00D518A0 /* SurveyIntroductionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyIntroductionViewController.swift; sourceTree = "<group>"; };
 		17CA1A2424F8226A00856B9E /* new-pompeius.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "new-pompeius.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -162,6 +164,7 @@
 				17548B382500631600D518A0 /* MyProfile2ViewController.swift */,
 				17548B3A25006F2E00D518A0 /* SurveyIntroductionViewController.swift */,
 				1715ADCA2502C4F8009B91D2 /* Q1ViewController.swift */,
+				172A6FBE2505BAA700D0651D /* Q2ViewController.swift */,
 				1715ADC62502C24C009B91D2 /* registerViewController.swift */,
 				17CF916524F9AA5800FF468B /* ExploreViewController.swift */,
 				17CF916324F9A97400FF468B /* EditProfileViewController.swift */,
@@ -375,6 +378,7 @@
 				17CF916624F9AA5800FF468B /* ExploreViewController.swift in Sources */,
 				1715ADCB2502C4F8009B91D2 /* Q1ViewController.swift in Sources */,
 				17CA1A5424F9907A00856B9E /* MyProfileViewController.swift in Sources */,
+				172A6FBF2505BAA700D0651D /* Q2ViewController.swift in Sources */,
 				17CA1A2824F8226A00856B9E /* AppDelegate.swift in Sources */,
 				17CA1A2A24F8226A00856B9E /* SceneDelegate.swift in Sources */,
 				17CA1A4E24F9573200856B9E /* MessagingViewController.swift in Sources */,
