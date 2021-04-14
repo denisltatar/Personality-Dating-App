@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -16,19 +18,23 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Logo-1" translatesAutoresizingMaskIntoConstraints="NO" id="UGX-qB-VWR">
-                                <rect key="frame" x="-23.5" y="325.5" width="461" height="245"/>
+                                <rect key="frame" x="-23.666666666666657" y="325.66666666666669" width="461.33333333333326" height="245.00000000000006"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="461" id="WdF-ax-sEK"/>
                                     <constraint firstAttribute="height" constant="245" id="q5R-HC-Fus"/>
                                 </constraints>
                             </imageView>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="UGX-qB-VWR" secondAttribute="bottom" constant="291.32999999999998" id="78b-0H-udR"/>
                             <constraint firstItem="UGX-qB-VWR" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="Qza-BN-0fw"/>
                             <constraint firstItem="UGX-qB-VWR" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="Vjr-tf-hok"/>
+                            <constraint firstAttribute="trailing" secondItem="UGX-qB-VWR" secondAttribute="trailing" constant="-23.670000000000002" id="WGt-4k-SKo"/>
+                            <constraint firstItem="UGX-qB-VWR" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="281.67000000000002" id="X1Q-gX-rlo"/>
+                            <constraint firstItem="UGX-qB-VWR" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" constant="-23.670000000000002" id="waH-kq-EqE"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -38,5 +44,8 @@
     </scenes>
     <resources>
         <image name="Logo-1" width="285" height="228"/>
+        <systemColor name="systemBackgroundColor">
+            <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
     </resources>
 </document>

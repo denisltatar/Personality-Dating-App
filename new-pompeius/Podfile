@@ -17,6 +17,7 @@ pod 'Firebase/Firestore'
 pod 'GoogleSignIn'
 pod 'Firebase/Database'
 pod 'Firebase/Storage'
+pod 'IQKeyboardManagerSwift'
 
   target 'new-pompeiusTests' do
     inherit! :search_paths
