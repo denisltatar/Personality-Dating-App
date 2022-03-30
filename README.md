@@ -1,4 +1,4 @@
-# Personality-Dating-App
+# Pompeius
 Find your perfect match based off your personality and activities you enjoy. 
 
 Below are some screenshots of Pompeius. All the designs you see below were created by me and have also been implemented by me. Hope you enjoy! 
